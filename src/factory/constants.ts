@@ -17,7 +17,7 @@ export const CONTRACT_ADDRESSES: Record<number, ContractAddresses> = {
     bridge: "0x8a53d2762f90711291c7168fDfC776fB3CFFf7ab",
     delay: "0x753dAEDD9b4464D5AC0b46Ec5c54163678b5ecA3",
     factory: "0x00000000062c52e29e8029dc2413172f6d619d85",
-    exit: "0x793A69fF46ce0f8C825f14e339cd0Dc8De6A8400",
+    exit: "0x43b06634Cd6c9b55460a6aFCF412dCf6e9bcBB0E",
     scopeGuard: "0xfDc921764b88A889F9BFa5Ba874f77607a63b832",
     circulatingSupply: "0xd7a85e7D0813F8440602E243Acb67df3CCeb5a60",
   },
@@ -48,7 +48,7 @@ export const CONTRACT_ADDRESSES: Record<number, ContractAddresses> = {
     bridge: "0x8a53d2762f90711291c7168fDfC776fB3CFFf7ab",
     delay: "0x753dAEDD9b4464D5AC0b46Ec5c54163678b5ecA3",
     factory: "0x00000000062c52e29e8029dc2413172f6d619d85",
-    exit: "0x793A69fF46ce0f8C825f14e339cd0Dc8De6A8400",
+    exit: "0x43b06634Cd6c9b55460a6aFCF412dCf6e9bcBB0E",
     scopeGuard: "0xfDc921764b88A889F9BFa5Ba874f77607a63b832",
     circulatingSupply: "0xd7a85e7D0813F8440602E243Acb67df3CCeb5a60",
   }

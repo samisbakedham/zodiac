@@ -6,7 +6,6 @@ import {
   calculateSingletonAddress,
   estimateDeploymentGas,
 } from "./utils";
-import { ProxyFactoryByteCode } from "./utils";
 
 const FactorySingletonAddress = "0xce0042B868300000d44A59004Da54A005ffdcf9f";
 const Deployer = "0xBb6e024b9cFFACB947A71991E386681B1Cd1477D";
@@ -29,7 +28,10 @@ export const deploySingletonFactory = async (
     data,
   };
 
-  const expectedAddress = calculateSingletonAddress(ProxyFactoryByteCode, salt);
+  const expectedAddress = calculateSingletonAddress(
+    FactorySingletonAddress,
+    salt
+  );
   console.log("Expected address of deployed contract:", expectedAddress);
 
   const gas = await estimateDeploymentGas(
@@ -55,7 +57,7 @@ export const deploySingletonFactory = async (
     console.log("Sending gas to deployer");
     const fillDeployerTransaction = await caller.sendTransaction({
       to: Deployer,
-      value: gasInGwei
+      value: gasInGwei,
     });
     const fillDeployerReceipt = await fillDeployerTransaction.wait();
     console.log("Tx hash: ", fillDeployerReceipt.transactionHash);
@@ -70,3 +72,5 @@ export const deploySingletonFactory = async (
   const receipt = await deploymentTransaction.wait();
   console.log("Deployment transaction hash: ", receipt.transactionHash);
 };
+
+export * from "./utils";
